@@ -1,0 +1,10 @@
+---
+- name: Lab deployment successfully completed
+  hosts: localhost
+  gather_facts: false
+    
+  tasks:
+  
+  - name: Lab creation successful!
+    debug:
+      msg: "You can now access your lab server at: {{ labserver_endpoint }}"
