@@ -159,3 +159,4 @@
     set_stats:
       data:
         instances: "{{ ec2.tagged_instances }}"
+        instance_source: ec2
