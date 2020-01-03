@@ -65,3 +65,8 @@
     service: 
       name: firewalld 
       state: restarted
+    
+  - name: Ansible Tower Workflow Pass
+    set_stats:
+      data:
+        labserver_endpoint: "http://{{ instances[0].public_dns_name }}"
