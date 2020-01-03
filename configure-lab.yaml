@@ -22,8 +22,7 @@
       ansible_host: "{{ item.public_ip }}"
     with_items: "{{ instances }}"
     when: instance_source is ec2
-    
----
+
 - name: Configure Workshop Lab systems
   hosts: labservers
   gather_facts: false
