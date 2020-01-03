@@ -13,6 +13,7 @@
     resource_requester: admin
     
   tasks:
+  
   - name: Create VPC
     ec2_vpc_net:
       state: present
@@ -25,10 +26,6 @@
         workshoplabs: "true"
       region: "{{ ec2_region }}"
     register: vpc_network
-    
-  - name: debug VPC network
-    debug:
-      var: vpc_network
       
   - name: Create VPC Subnet
     ec2_vpc_subnet:
