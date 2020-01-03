@@ -98,10 +98,11 @@
         workshoplabs: "true"
         
   - name: Search for latest RHEL 7 AMI
-    ec2_ami_find:
+    ec2_ami_info:
       owner: "309956199498"
       region: "{{ ec2_region }}"
-      name: "RHEL-7.7_HVM-2*"
+      filters:
+        name: "RHEL-7.7_HVM-2*"
     register: find_results
     
   - name: Create EC2 Instances with tags
