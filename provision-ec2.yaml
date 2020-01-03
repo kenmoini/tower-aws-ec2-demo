@@ -22,7 +22,7 @@
         resourceRequester: "{{ resource_requester }}"
         environment: workshop_lab
         labStackName: "{{ ec2_stack_name }}"
-        workshoplabs: true
+        workshoplabs: "true"
       region: "{{ ec2_region }}"
     register: vpc_network
     
@@ -40,7 +40,7 @@
         resourceRequester: "{{ resource_requester }}"
         environment: workshop_lab
         labStackName: "{{ ec2_stack_name }}"
-        workshoplabs: true
+        workshoplabs: "true"
     register: vpc_subnet
       
   - name: Create VPC Internet Gateway
@@ -52,7 +52,7 @@
         resourceRequester: "{{ resource_requester }}"
         environment: workshop_lab
         labStackName: "{{ ec2_stack_name }}"
-        workshoplabs: true
+        workshoplabs: "true"
     register: vpc_igw
     
   - name: Create VPC Public Subnet Route Table
@@ -63,7 +63,7 @@
         resourceRequester: "{{ resource_requester }}"
         environment: workshop_lab
         labStackName: "{{ ec2_stack_name }}"
-        workshoplabs: true
+        workshoplabs: "true"
         name: "{{ ec2_stack_name }}-Public"
       subnets:
         - "{{ vpc_subnet.subnet.id }}"
@@ -95,7 +95,7 @@
         resourceRequester: "{{ resource_requester }}"
         environment: workshop_lab
         labStackName: "{{ ec2_stack_name }}"
-        workshoplabs: true
+        workshoplabs: "true"
         
   - name: Search for latest RHEL 7 AMI
     ec2_ami_find:
@@ -128,7 +128,7 @@
         resourceRequester: "{{ resource_requester }}"
         environment: workshop_lab
         labStackName: "{{ ec2_stack_name }}"
-        workshoplabs: true
+        workshoplabs: "true"
       assign_public_ip: true
     register: ec2
     
