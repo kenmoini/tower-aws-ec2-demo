@@ -21,7 +21,7 @@
       ansible_user: ec2-user
       ansible_host: "{{ item.public_ip }}"
     with_items: "{{ instances }}"
-    when: instance_source is ec2
+    when: instance_source is search ('ec2')
 
 - name: Configure Workshop Lab systems
   hosts: labservers
