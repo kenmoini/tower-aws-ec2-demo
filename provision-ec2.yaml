@@ -113,7 +113,7 @@
         delete_on_termination: true
       vpc_subnet_id: "{{ vpc_subnet.subnet.id }}"
       instance_type: m4.xlarge
-      image: "{{ find_results.results[0].ami_id }}"
+      image: "{{ find_results.images[0].image_id }}"
       wait: true
       region: "{{ ec2_region }}"
       exact_count: "{{ ec2_exact_count }}"
