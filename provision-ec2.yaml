@@ -33,6 +33,7 @@
   - name: Create VPC Subnet
     ec2_vpc_subnet:
       state: present
+      region: "{{ ec2_region }}"
       vpc_id: "{{ vpc_network.vpc.id }}"
       cidr: "{{ ec2_subnetcidr }}"
       tags:
