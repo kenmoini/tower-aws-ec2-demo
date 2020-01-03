@@ -38,7 +38,10 @@
   - name: Install lab packages
     yum:
       state: present
-      name: httpd
+      name:
+        - httpd
+        - python-firewall
+        - firewalld
     
   - name: Configure labs
     service:
