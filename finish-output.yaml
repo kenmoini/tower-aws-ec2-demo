@@ -8,7 +8,14 @@
   tasks:
   
   - name: Send Message to ChatOps
-    rocketchat: token={{ rc_tower_token }} domain=rchat-chatops-rocketchat.apps.openshift.fiercesw.network msg="You can now access your lab server at: {{ labserver_endpoint }}" color=good channel=#devsecops-workshop username={{ rc_tower_user }} icon_url=https://miro.medium.com/max/900/1*Kv7-9rbjnioqGIyycCtkJQ.jpeg
+    rocketchat: 
+      token: '{{ rc_tower_token }}'
+      domain: rchat-chatops-rocketchat.apps.openshift.fiercesw.network 
+      msg: "You can now access your lab server at: {{ labserver_endpoint }}"
+      color: good
+      channel: #devsecops-workshop
+      username: '{{ rc_tower_user }}'
+      icon_url" https://miro.medium.com/max/900/1*Kv7-9rbjnioqGIyycCtkJQ.jpeg
     delegate_to: localhost
     ignore_errors: true
       
