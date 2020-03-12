@@ -2,6 +2,8 @@
 - name: Lab deployment successfully completed
   hosts: localhost
   gather_facts: false
+  vars_files:
+  - vaulted_vars.yaml
     
   tasks:
   
