@@ -15,7 +15,7 @@
       color: good
       channel: #devsecops-workshop
       username: '{{ rc_tower_user }}'
-      icon_url" https://miro.medium.com/max/900/1*Kv7-9rbjnioqGIyycCtkJQ.jpeg
+      icon_url: https://miro.medium.com/max/900/1*Kv7-9rbjnioqGIyycCtkJQ.jpeg
     delegate_to: localhost
     ignore_errors: true
       
